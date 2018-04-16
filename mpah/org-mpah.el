@@ -16,16 +16,26 @@
   (set (make-variable-buffer-local 'ispell-parser) 'tex))
 (add-hook 'org-mode-hook 'flyspell-ignore-tex)
 
-;; keybindings
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-cc" 'org-capture)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
-
 ;; Add org-agenda file
 (setq org-agenda-files '("~/Dropbox/Org/tasks.org"))
 
+;; Add languages to org-babel
+;; active Babel languages
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((R . t)
+   (emacs-lisp . t)
+   (gnuplot . t)
+   (lisp . t)
+   (sh . t)))
 
+;; alway evaluate source blocks
+(setq org-confirm-babel-evaluate nil)
+
+;; fontify code in code blocks
+(setq org-src-fontify-natively t)
+
+(add-to-list 'org-src-lang-modes '("<LANGUAGE>" . "<MAJOR-MODE>"))
 ;; Stored searches
 ;; http://orgmode.org/manual/Storing-searches.html#Storing-searches
  (setq org-agenda-custom-commands
@@ -56,6 +66,18 @@
          "* TODO %?\n %t")
         ("n" "Note" entry (file+headline "~/Dropbox/Org/tasks.org" "Notes")
          "** %?\n %t")))
+
+
+;; koma-article
+(with-eval-after-load "ox-latex"
+  (add-to-list 'org-latex-classes
+               '("koma-article" "\\documentclass{scrartcl}"
+                 ("\\section{%s}" . "\\section*{%s}")
+                 ("\\subsection{%s}" . "\\subsection*{%s}")
+                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                 ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                 ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
+
 
 (provide 'org-mpah)
 ;;; org-mpah.el ends here

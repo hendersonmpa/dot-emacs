@@ -58,4 +58,6 @@
 (require 'ibuffer-mpah)
 (require 'org-mpah)
 (require 'slime-mpah)
+(require 'editor-mpah)
+(require 'global-keybindings-mpah)
 

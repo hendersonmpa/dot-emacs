@@ -23,6 +23,7 @@
 (column-number-mode t)
 (size-indication-mode t)
 
+
 ;; enable y/n answers
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -50,13 +51,6 @@ dark theme")
       (disable-theme theme))
     (load-theme (if is-light default-dark-color-theme default-light-color-theme))))
 
-(if window-system
-    (progn
-      (global-set-key (kbd "<f12>") 'toggle-dark-light-theme)
-      (load-theme 'solarized-dark)
-      ;;(set-face-font 'default "Liberation Mono-12")
-      ))
-
 ;; make emacs always use its own browser for opening URL links
 ;;(setq browse-url-browser-function 'eww-browse-url) ;; does not work in windows
 
@@ -67,8 +61,8 @@ dark theme")
 (add-hook 'after-init-hook #'sml/setup)
 
 ;; show the cursor when moving after big movements in the window
-(require 'beacon)
-(beacon-mode +1)
+;; (require 'beacon)
+;; (beacon-mode +1)
 
 ;; show available keybindings after you start typing
 (require 'which-key)
@@ -78,7 +72,7 @@ dark theme")
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+
 
 ;; Take a break from helm - a bit too crazy!
 ;;helm auto-completion mode
@@ -92,7 +86,8 @@ dark theme")
 
 ;; ido and smex
 (require 'ido)
-(require 'ido-ubiquitous)
+(require 'ido-completing-read+)
+;;(require 'ido-ubiquitous)
 (require 'flx-ido)
 
 (setq ido-enable-prefix nil
@@ -115,13 +110,13 @@ dark theme")
 (require 'smex)
 (setq smex-save-file (expand-file-name ".smex-items" mpah-savefile-dir))
 (smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
 ;; company-mode
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; parens
+(setq show-paren-delay 0)  ;; remove delay prior to showing match
+(show-paren-mode 1) ;; show matching parens
 (require 'smartparens-config)
 (show-smartparens-global-mode +1)
 (smartparens-strict-mode)

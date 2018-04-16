@@ -6,7 +6,7 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ;;("marmalade" . "http://marmalade-repo.org/packages/")
 			 ("melpa-stable" . "http://stable.melpa.org/packages/")
-                         ("melpa" . "http://melpa.org/packages/")
+			 ;;("melpa" . "http://melpa.org/packages/")
 			 ("org" . "http://orgmode.org/elpa/")))
 
 ;; Use the stable version of cider
@@ -16,17 +16,21 @@
 
 (defvar mpah-packages
   '(ahk-mode				;autohotkey major mode
-    gnuplot-mode                        ;gnuplot major mode
     beacon				;point emphasis
     cider 				;clojure major-mode
     company				;in-buffer autocompletion
+    crux                                ;useful extensions
     ess					;R major-mode
     flx-ido				;fuzzy matching in ido
     geiser 				;scheme - racket
+    gnuplot-mode                        ;gnuplot major mode
+    gnuplot                             ;drive gnuplot from within emacs
 ;;    helm				;mini-buffer autocompletion
     ibuffer
-    ido-ubiquitous			;ido completion everywhere
+    ido-completing-read+ 			;ido completion everywhere
+;;    ido-ubiquitous  obsolete merged with above
     magit
+;;    markdown-mode ;markdown
     paredit 				;structured editing 
     rainbow-delimiters
     recentf 				;view recently opened files
@@ -34,6 +38,7 @@
     smartparens
     smart-mode-line			;better mode-line
     smex 				;enhanced M-x built on ido
+    rainbow-mode                        ;colour, colour names
     flycheck				;code checking
     which-key)
   "A list of packages to ensure are installed at launch.")
