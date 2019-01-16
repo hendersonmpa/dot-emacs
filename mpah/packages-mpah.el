@@ -6,7 +6,7 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ;;("marmalade" . "http://marmalade-repo.org/packages/")
 			 ("melpa-stable" . "http://stable.melpa.org/packages/")
-			 ;;("melpa" . "http://melpa.org/packages/")
+			 ("melpa" . "http://melpa.org/packages/")
 			 ("org" . "http://orgmode.org/elpa/")))
 
 ;; Use the stable version of cider
@@ -20,8 +20,11 @@
     cider 				;clojure major-mode
     company				;in-buffer autocompletion
     crux                                ;useful extensions
+    ein                                 ;emacs ipython notebook
+    elpy                                ;python development
     ess					;R major-mode
     flx-ido				;fuzzy matching in ido
+    flycheck                            ;used with elpy
     geiser 				;scheme - racket
     gnuplot-mode                        ;gnuplot major mode
     gnuplot                             ;drive gnuplot from within emacs
@@ -31,7 +34,9 @@
 ;;    ido-ubiquitous  obsolete merged with above
     magit
 ;;    markdown-mode ;markdown
-    paredit 				;structured editing 
+    paredit 				;structured editing
+    py-autopep8                         ;used with elpy
+    racket-mode 
     rainbow-delimiters
     recentf 				;view recently opened files
     solarized-theme

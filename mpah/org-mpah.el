@@ -21,13 +21,17 @@
 
 ;; Add languages to org-babel
 ;; active Babel languages
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((R . t)
-   (emacs-lisp . t)
-   (gnuplot . t)
-   (lisp . t)
-   (sh . t)))
+;;;; commented out for now, causes an error
+
+;; Debugger entered--Lisp error: (file-missing "Cannot open load file" "No such file or directory" "ob-sh")
+;; (org-babel-do-load-languages
+;;  'org-babel-load-languages
+;;  '((R . t)
+;;    (emacs-lisp . t)
+;;    (gnuplot . t)
+;;    (lisp . t)
+;;    (sh . t)))
+;;(add-to-list 'org-src-lang-modes '("<LANGUAGE>" . "<MAJOR-MODE>"))
 
 ;; alway evaluate source blocks
 (setq org-confirm-babel-evaluate nil)
@@ -35,7 +39,7 @@
 ;; fontify code in code blocks
 (setq org-src-fontify-natively t)
 
-(add-to-list 'org-src-lang-modes '("<LANGUAGE>" . "<MAJOR-MODE>"))
+
 ;; Stored searches
 ;; http://orgmode.org/manual/Storing-searches.html#Storing-searches
  (setq org-agenda-custom-commands
@@ -77,6 +81,41 @@
                  ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
                  ("\\paragraph{%s}" . "\\paragraph*{%s}")
                  ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
+
+
+
+;; Org citations with ebib
+(setq ebib-citation-commands
+      (quote ((any (("cite" "\\cite{%K}")))
+              (org-mode (("cite" " cite:%K"))))))
+
+;;; A more complicated version
+;; (setq ebib-citation-commands
+;;       (quote ((any (("cite" "\\cite%<[%A]%>{%K}")))
+;;               (org-mode (("cite" "[[cite:%K][%A;%A;%A]]"))))))
+
+
+;; (org-add-link-type
+;;  "cite" 'ebib
+;;  (lambda (path desc format)
+;;    (cond
+;;      ((eq format 'html)
+;;       (format "(<cite>%s</cite>)" path))
+;;      ((eq format 'latex)
+;;       (if (or (not desc) (equal 0 (search "cite:" desc)))
+;;           (format "\\cite{%s}" path)
+;;           (format "\\cite[%s][%s]{%s}"
+;;                   (cadr (split-string desc ";"))
+;;                   (car (split-string desc ";"))  path))))))
+
+;; (org-add-link-type "ebib" 'ebib)
+
+
+(setq org-latex-pdf-process
+      '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "biber %b"
+        "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
 
 (provide 'org-mpah)

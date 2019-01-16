@@ -60,4 +60,5 @@
 (require 'slime-mpah)
 (require 'editor-mpah)
 (require 'global-keybindings-mpah)
+(require 'python-mpah)
 
