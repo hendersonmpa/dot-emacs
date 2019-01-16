@@ -9,7 +9,11 @@
 
 
 (defvar mpah-dir "~/.emacs.d/mpah/"
- "The root dir of the emacs config files.")
+  "The root dir of the emacs config files.")
+
+(defvar mpah-savefile-dir "~/.emacs.d/savefile"
+  "This folder stores all the automatically generated save/history-files.")
+
 (add-to-list 'load-path mpah-dir)
 
 ;; Always load newest byte code
@@ -21,9 +25,6 @@
 (load custom-file)
 
 ;; (defvar mpah-dir (file-name-directory load-file-name)
-
-(defvar mpah-savefile-dir (expand-file-name "savefile" mpah-dir)
-  "This folder stores all the automatically generated save/history-files.")
 
 ;;(defvar hex nil "IP address of hex")
 ;; see http://ergoemacs.org/emacs/elisp_defvar_problem.html for why I did this.
@@ -61,4 +62,5 @@
 (require 'editor-mpah)
 (require 'global-keybindings-mpah)
 (require 'python-mpah)
+(require 'mail-mpah)
 
