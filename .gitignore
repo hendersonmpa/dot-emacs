@@ -5,3 +5,6 @@ session.*
 *~
 *#
 **/*~
+/abbrev_defs
+/recentf
+savefile/
