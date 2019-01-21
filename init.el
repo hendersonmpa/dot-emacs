@@ -24,6 +24,9 @@
 		   "custom-mpah.el"))
 (load custom-file)
 
+;; map M-y to browse-kill-ring
+(browse-kill-ring-default-keybindings)
+
 ;; (defvar mpah-dir (file-name-directory load-file-name)
 
 ;;(defvar hex nil "IP address of hex")
@@ -63,4 +66,5 @@
 (require 'global-keybindings-mpah)
 (require 'python-mpah)
 (require 'mail-mpah)
+;;(require 'helm-mpah)
 

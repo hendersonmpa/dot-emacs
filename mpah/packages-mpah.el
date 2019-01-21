@@ -17,6 +17,7 @@
 (defvar mpah-packages
   '(ahk-mode				;autohotkey major mode
     beacon				;point emphasis
+    browse-kill-ring                    ;browse the kill ring
     cider 				;clojure major-mode
     company				;in-buffer autocompletion
     crux                                ;useful extensions

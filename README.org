@@ -1,0 +1,7 @@
+#+TITLE: Emacs Configuration Files
+
+* Description
+
+* Things to Do
+- Add M-y  to some kind of browse kill ring function
+  - maybe https://github.com/browse-kill-ring/browse-kill-ring
