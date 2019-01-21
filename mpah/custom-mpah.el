@@ -13,7 +13,7 @@
  '(cua-normal-cursor-color "#839496")
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
- '(custom-enabled-themes (quote (tango-dark)))
+ '(custom-enabled-themes nil)
  '(custom-safe-themes
    (quote
     ("f5512c02e0a6887e987a816918b7a684d558716262ac7ee2dd0437ab913eaec6" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
@@ -41,6 +41,7 @@
  '(hl-fg-colors
    (quote
     ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
+ '(hl-paren-colors (quote ("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900")))
  '(magit-diff-use-overlays nil)
  '(nrepl-message-colors
    (quote

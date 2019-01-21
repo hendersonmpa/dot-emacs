@@ -33,9 +33,8 @@
 ;; Start a regular shell if you prefer that.
 (global-set-key (kbd "C-x M-m") 'shell)
 
-;; If you want to be able to M-x without meta
-(global-set-key (kbd "C-x C-m") 'smex)
-
+;; map M-y to browse-kill-ring
+(browse-kill-ring-default-keybindings)
 
 ;; use hippie-expand instead of dabbrev
 (global-set-key (kbd "M-/") 'hippie-expand)
@@ -43,8 +42,8 @@
 ;; replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-(unless (fboundp 'toggle-frame-fullscreen)
-  (global-set-key (kbd "<f11>") 'prelude-fullscreen))
+;; (unless (fboundp 'toggle-frame-fullscreen)
+;;   (global-set-key (kbd "<f11>") 'prelude-fullscreen))
 
 ;; toggle menu-bar visibility
 (if window-system
@@ -62,8 +61,9 @@
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 (global-set-key (kbd "M-x") 'smex)
+;; If you want to be able to M-x without meta
+(global-set-key (kbd "C-x C-m") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-
 
 ;; org-mode keybindings
 (global-set-key "\C-cl" 'org-store-link)

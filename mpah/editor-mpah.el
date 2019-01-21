@@ -25,12 +25,10 @@
 ;; keep in mind known issues with zsh - see emacs wiki
 (setq tramp-default-method "ssh")
 
-
 ;; flyspell-mode does spell-checking on the fly as you type
 (require 'flyspell)
 (setq ispell-program-name "aspell" ; use aspell instead of ispell
       ispell-extra-args '("--sug-mode=ultra"))
-
 
 ;; enable some really cool extensions like C-x C-j(dired-jump)
 (require 'dired-x)
