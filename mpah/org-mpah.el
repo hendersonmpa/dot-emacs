@@ -19,26 +19,6 @@
 ;; Add org-agenda file
 (setq org-agenda-files '("~/Dropbox/Org/tasks.org"))
 
-;; Add languages to org-babel
-;; active Babel languages
-;;;; commented out for now, causes an error
-
-;; Debugger entered--Lisp error: (file-missing "Cannot open load file" "No such file or directory" "ob-sh")
-;; (org-babel-do-load-languages
-;;  'org-babel-load-languages
-;;  '((R . t)
-;;    (emacs-lisp . t)
-;;    (gnuplot . t)
-;;    (lisp . t)
-;;    (sh . t)))
-;;(add-to-list 'org-src-lang-modes '("<LANGUAGE>" . "<MAJOR-MODE>"))
-
-;; alway evaluate source blocks
-(setq org-confirm-babel-evaluate nil)
-
-;; fontify code in code blocks
-(setq org-src-fontify-natively t)
-
 
 ;; Stored searches
 ;; http://orgmode.org/manual/Storing-searches.html#Storing-searches
@@ -71,7 +51,7 @@
         ("n" "Note" entry (file+headline "~/Dropbox/Org/tasks.org" "Notes")
          "** %?\n %t")))
 
-
+;;; Org Export
 ;; koma-article
 (with-eval-after-load "ox-latex"
   (add-to-list 'org-latex-classes
@@ -116,6 +96,35 @@
         "biber %b"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+
+
+;;; Org Babel
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+;;   (sh . t)
+   (R . t)
+   (lisp . t)
+   (gnuplot . t)
+   (python . t)
+   (clojure . t)
+   (dot . t)
+   (ditaa . t)))
+
+(add-to-list 'org-src-lang-modes
+             '("r" . ess-mode))
+
+;; This happened to be the directory it gets installed with Fedora
+(setq org-ditaa-jar-path "/usr/bin/ditaa")
+
+(setq org-confirm-babel-evaluate nil)
+;; Code highlighting
+(setq org-src-fontify-natively t)
+(setq org-src-tab-acts-natively t)
+;; Export code highlighting
+(setq org-latex-listings 'minted)
+
+
 
 
 (provide 'org-mpah)
