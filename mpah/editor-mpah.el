@@ -37,5 +37,8 @@
 (require 'ediff)
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
+;; Turn on yasnippet everywhere
+(yas-global-mode 1)
+
 (provide 'editor-mpah)
 ;;; editor-mpah.el ends here
