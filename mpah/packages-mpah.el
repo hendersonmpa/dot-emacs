@@ -46,7 +46,8 @@
     smex 				;enhanced M-x built on ido
     rainbow-mode                        ;colour, colour names
     flycheck				;code checking
-    which-key)
+    which-key
+    zenburn-theme)
   "A list of packages to ensure are installed at launch.")
 
 (defun mpah-packages-installed-p ()
