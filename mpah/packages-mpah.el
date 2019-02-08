@@ -34,7 +34,7 @@
     ido-completing-read+ 			;ido completion everywhere
 ;;    ido-ubiquitous  obsolete merged with above
     magit
-;;    markdown-mode ;markdown
+    markdown-mode                       ;markdown
     paredit 				;structured editing
     py-autopep8                         ;used with elpy
     racket-mode 

@@ -63,5 +63,7 @@
 (require 'global-keybindings-mpah)
 (require 'python-mpah)
 (require 'mail-mpah)
+(require 'ess-mpah)
+(require 'racket-mpah.el)
 ;;(require 'helm-mpah)
 
