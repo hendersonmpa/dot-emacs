@@ -1,4 +1,4 @@
-;;; ui-mpah.el --- Emacs UI optimizations and tweaks.
+;;; packages-mpah.el --- Package archives and my list of packages to install
 ;;; Code:
 
 (require 'package)
@@ -16,6 +16,7 @@
 
 (defvar mpah-packages
   '(ahk-mode				;autohotkey major mode
+    auctex                              ;latex
     beacon				;point emphasis
     browse-kill-ring                    ;browse the kill ring
     cider 				;clojure major-mode
