@@ -1,0 +1,6 @@
+#name : LATEX
+#contributor : Rick Moynihan <rick@sourcesmouth.co.uk>
+# --
+#+BEGIN_EXPORT LaTeX
+$0
+#+END_EXPORT

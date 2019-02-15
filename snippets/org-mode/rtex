@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: RFIG
+# key: rtex
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+
+#+begin_src R :session *R* :results output latex :exports results :tangle yes
+$0
+#+end_src

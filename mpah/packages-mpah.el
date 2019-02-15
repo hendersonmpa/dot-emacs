@@ -36,6 +36,7 @@
 ;;    ido-ubiquitous  obsolete merged with above
     magit
     markdown-mode                       ;markdown
+    notmuch                             ;search notmuch email index
     paredit 				;structured editing
     py-autopep8                         ;used with elpy
     racket-mode 

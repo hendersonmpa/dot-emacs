@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: table
+# key: tab
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+
+#+CAPTION[$1]:$2
+#+NAME: tab:$3
+$0

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: RFIG
+# key: rfig
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+
+#+begin_src R :session *R* :results graphics :file ./figures/$1 :exports results :tangle yes
+$0
+#+end_src

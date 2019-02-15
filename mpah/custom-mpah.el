@@ -13,7 +13,7 @@
  '(cua-normal-cursor-color "#839496")
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
- '(custom-enabled-themes nil)
+ '(custom-enabled-themes (quote (solarized-dark)))
  '(custom-safe-themes
    (quote
     ("ec5f697561eaf87b1d3b087dd28e61a2fc9860e4c862ea8e6b0b77bd4967d0ba" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "f5512c02e0a6887e987a816918b7a684d558716262ac7ee2dd0437ab913eaec6" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
@@ -48,12 +48,14 @@
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (racket-mode auto-correct ein py-autopep8 elpy crux rainbow-mode gnuplot zenburn-theme gnuplot-mode auctex ahk-mode smex paredit ido-ubiquitous flx-ido geiser rainbow-delimiters solarized-theme cider company company-mode helm which-key smart-mode-line beacon smartparens magit flycheck ess)))
+    (notmuch racket-mode auto-correct ein py-autopep8 elpy crux rainbow-mode gnuplot zenburn-theme gnuplot-mode auctex ahk-mode smex paredit ido-ubiquitous flx-ido geiser rainbow-delimiters solarized-theme cider company company-mode helm which-key smart-mode-line beacon smartparens magit flycheck ess)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
  '(term-default-bg-color "#002b36")
  '(term-default-fg-color "#839496")
+ '(tool-bar-mode t)
+ '(tool-bar-position (quote right))
  '(vc-annotate-background nil)
  '(vc-annotate-background-mode nil)
  '(vc-annotate-color-map

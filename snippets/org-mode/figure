@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: figure
+# key: fig
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+
+#+CAPTION[$1]:$2
+#+NAME: fig:$3
+#+ATTR_LaTeX: :width 0.9\textwidth
+[[file:./figures/$4]]
+$0
+
