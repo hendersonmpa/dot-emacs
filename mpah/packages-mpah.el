@@ -22,6 +22,7 @@
     cider 				;clojure major-mode
     company				;in-buffer autocompletion
     crux                                ;useful extensions
+    ebib                                ;emacs bibliography for latex and org files
     ein                                 ;emacs ipython notebook
     elpy                                ;python development
     ess					;R major-mode
@@ -38,6 +39,8 @@
     markdown-mode                       ;markdown
     notmuch                             ;search notmuch email index
     paredit 				;structured editing
+    polymode                            ;Extensible framework for multiple major modes
+    poly-R                              ;Various polymodes for R language
     py-autopep8                         ;used with elpy
     racket-mode 
     rainbow-delimiters

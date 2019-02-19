@@ -2,8 +2,7 @@
 ;;; Code:
 
 ;; Remove toolbar, scrollbar, menubar, blinking cursor and bell ring
-(when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
+(tool-bar-mode -1)
 (toggle-scroll-bar -1)
 (menu-bar-mode -1)
 (blink-cursor-mode -1)

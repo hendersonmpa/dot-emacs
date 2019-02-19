@@ -1,4 +1,4 @@
-;;; latexh-mpah.el --- Latex config
+;;; latex-mpah.el --- Latex config
 ;;; Code:
 
 ;; ebib configuration

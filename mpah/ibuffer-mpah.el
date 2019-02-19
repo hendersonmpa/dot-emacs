@@ -9,6 +9,7 @@
       '(("home"
 	 ("Dired" (mode . dired-mode ))
 	 ("Prompts" (or (name . "^\\*R\\*$")
+			(name . "^\\*R\\:.+*$")
 			(mode . inferior-ess-mode)
 			(name . "^\\*SQL\\*$")
 			(name . "^\\*Python\\*$")
@@ -20,6 +21,7 @@
 			(name . "^\\*shell\\*$")))
 	 ("Org" (or (mode . org-mode)
 		    (filename . "OrgMode")))
+	 ("Markdown" (mode . markdown-mode))
 	 ("LaTeX" (mode . latex-mode))
 	 ("emacs-config" (or (filename . ".emacs.d")
 			     (filename . "emacs-config")))
