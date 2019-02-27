@@ -44,5 +44,6 @@
 (require 'racket-mpah)
 (require 'latex-mpah)
 (require 'notmuch-mpah)
+(require 'markdown-mpah)
 ;;(require 'helm-mpah)
 

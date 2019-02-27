@@ -15,3 +15,5 @@
 (require 'poly-markdown)
 (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
+(provide 'markdown-mpah)
+;;; markdown-mpah.el ends here

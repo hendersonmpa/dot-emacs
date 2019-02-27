@@ -48,7 +48,8 @@ dark theme")
   (let ((is-light (find default-light-color-theme custom-enabled-themes)))
     (dolist (theme custom-enabled-themes)
       (disable-theme theme))
-    (load-theme (if is-light default-dark-color-theme default-light-color-theme))))
+    (load-theme (if is-light default-dark-color-theme default-light-color-theme))
+    (tool-bar-mode -1)))
 
 ;; make emacs always use its own browser for opening URL links
 ;;(setq browse-url-browser-function 'eww-browse-url) ;; does not work in windows

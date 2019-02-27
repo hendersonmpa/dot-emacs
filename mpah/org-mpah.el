@@ -102,7 +102,7 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . t)
-;;   (sh . t)
+   (shell . t)
    (R . t)
    (lisp . t)
    (gnuplot . t)

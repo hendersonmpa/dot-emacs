@@ -85,5 +85,4 @@ Missing packages are installed automatically."
 (mpah-install-packages)
 
 (provide 'packages-mpah)
-
 ;;; packages-mpah.el ends here
