@@ -3,7 +3,9 @@
 * Description
 
 * Things to Do
-- [ ] Figure out what to do about auto saves
+- [X] Figure out what to do about auto saves
 - [X] Add M-y  to some kind of browse kill ring function
   - maybe https://github.com/browse-kill-ring/browse-kill-ring
+
+
 
