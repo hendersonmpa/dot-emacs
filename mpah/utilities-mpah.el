@@ -2,7 +2,7 @@
 ;;; Code:
 
 
-(defun unfill-region ()
+(defun mpah-unfill-region ()
   (interactive)
   (let ((fill-column (point-max)))
     (fill-region (region-beginning) (region-end) nil)))

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: RCHUNK
+# key: rchunk
+# binding: "keybinding"
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+$0#```{r}
