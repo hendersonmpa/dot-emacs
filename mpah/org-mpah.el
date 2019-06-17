@@ -51,6 +51,17 @@
         ("n" "Note" entry (file+headline "~/Dropbox/Org/tasks.org" "Notes")
          "** %?\n %t")))
 
+;; Export to .doc
+(setq org-odt-preferred-output-format "doc")
+
+
+;; Export bold text as bold not alert
+;; (defun my-beamer-bold (contents backend info)
+;;   (when (eq backend 'beamer)
+;;     (replace-regexp-in-string "\\`\\\\[A-Za-z0-9]+" "\\\\textbf" contents)))
+
+;; (add-to-list 'org-export-filter-bold-functions 'my-beamer-bold)
+
 ;;; Org Export
 ;; koma-article
 (with-eval-after-load "ox-latex"
@@ -92,10 +103,10 @@
 
 
 (setq org-latex-pdf-process
-      '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+      '("xelatex -8bit -shell-escape -interaction nonstopmode -output-directory %o %f"
         "biber %b"
-        "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+        "xelatex -8bit -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "xelatex -8bit -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
 
 ;;; Org Babel
@@ -124,8 +135,17 @@
 ;; Export code highlighting
 (setq org-latex-listings 'minted)
 
+(setq org-latex-minted-options
+      '(("frame" "lines")
+        ("fontsize" "\\scriptsize") ;; \\scriptsize
+        ("linenos" "false")
+	("showspaces" "false")))
 
-
+(setq org-latex-pdf-process
+      '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "biber %b"
+        "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
 (provide 'org-mpah)
 ;;; org-mpah.el ends here

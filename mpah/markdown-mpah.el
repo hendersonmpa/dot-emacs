@@ -2,7 +2,9 @@
 ;;; Code:
 ;;http://joostkremers.github.io/pandoc-mode/
 (add-hook 'markdown-mode-hook 'pandoc-mode)
+(add-hook 'markdown-mode-hook 'turn-on-flyspell)
 (add-hook 'pandoc-mode-hook 'pandoc-load-default-settings)
+
 ;;(setq pandoc-binary "/usr/local/bin/pandoc")
 
 ;;; Markdown mode
@@ -14,6 +16,16 @@
 (require 'poly-R)
 (require 'poly-markdown)
 (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
+
+;;;Insert new chunk for Rmarkdown
+;; (defun tws-insert-r-chunk (header) 
+;;   "Insert an r-chunk in markdown mode. Necessary due to interactions between polymode and yas snippet" 
+;;   (interactive "sHeader: ") 
+;;   (insert (concat "```{r " header "}\n\n```")) 
+;;   (forward-line -1))
+
+;; (global-set-key (kbd "C-c C-i") 'tws-insert-r-chunk)
+
 
 (provide 'markdown-mpah)
 ;;; markdown-mpah.el ends here

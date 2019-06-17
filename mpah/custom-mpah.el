@@ -8,6 +8,10 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#657b83"])
+ '(blink-cursor-mode nil)
+ '(column-number-mode t)
+ '(company-quickhelp-color-background "#4F4F4F")
+ '(company-quickhelp-color-foreground "#DCDCCC")
  '(compilation-message-face (quote default))
  '(cua-global-mark-cursor-color "#2aa198")
  '(cua-normal-cursor-color "#839496")
@@ -16,7 +20,7 @@
  '(custom-enabled-themes (quote (solarized-dark)))
  '(custom-safe-themes
    (quote
-    ("ec5f697561eaf87b1d3b087dd28e61a2fc9860e4c862ea8e6b0b77bd4967d0ba" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "f5512c02e0a6887e987a816918b7a684d558716262ac7ee2dd0437ab913eaec6" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "ec5f697561eaf87b1d3b087dd28e61a2fc9860e4c862ea8e6b0b77bd4967d0ba" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "f5512c02e0a6887e987a816918b7a684d558716262ac7ee2dd0437ab913eaec6" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(fci-rule-color "#073642")
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
  '(highlight-symbol-colors
@@ -43,18 +47,22 @@
     ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
  '(hl-paren-colors (quote ("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900")))
  '(magit-diff-use-overlays nil)
+ '(menu-bar-mode nil)
  '(nrepl-message-colors
    (quote
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (poly-R polymode ebib notmuch racket-mode auto-correct ein py-autopep8 elpy crux rainbow-mode gnuplot zenburn-theme gnuplot-mode auctex ahk-mode smex paredit ido-ubiquitous flx-ido geiser rainbow-delimiters solarized-theme cider company company-mode helm which-key smart-mode-line beacon smartparens magit flycheck ess)))
+    (slime poly-R polymode ebib notmuch racket-mode auto-correct ein py-autopep8 elpy crux rainbow-mode gnuplot zenburn-theme gnuplot-mode auctex ahk-mode smex paredit ido-ubiquitous flx-ido geiser rainbow-delimiters solarized-theme cider company company-mode helm which-key smart-mode-line beacon smartparens magit flycheck ess)))
+ '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
+ '(show-paren-mode t)
+ '(size-indication-mode t)
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
  '(term-default-bg-color "#002b36")
  '(term-default-fg-color "#839496")
- '(tool-bar-mode t)
+ '(tool-bar-mode nil)
  '(tool-bar-position (quote right))
  '(vc-annotate-background nil)
  '(vc-annotate-background-mode nil)
