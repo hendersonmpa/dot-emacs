@@ -1,6 +1,6 @@
 ;;; slime-mpah.el --- Slime configuration
 ;;; Code:
-(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; (load (expand-file-name "~/quicklisp/slime-helper.el"))
 
 (setq slime-lisp-implementations
       '((sbcl ;;("sbcl" "--noinform --no-linedit")
