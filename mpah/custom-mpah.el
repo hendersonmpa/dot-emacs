@@ -48,7 +48,7 @@
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (ido-completing-read+ browse-kill-ring poly-R polymode ebib notmuch racket-mode auto-correct ein py-autopep8 elpy crux rainbow-mode gnuplot zenburn-theme gnuplot-mode auctex ahk-mode smex paredit ido-ubiquitous flx-ido geiser rainbow-delimiters solarized-theme cider company company-mode helm which-key smart-mode-line beacon smartparens magit flycheck ess)))
+    (htmlize ido-completing-read+ browse-kill-ring poly-R polymode ebib notmuch racket-mode auto-correct ein py-autopep8 elpy crux rainbow-mode gnuplot zenburn-theme gnuplot-mode auctex ahk-mode smex paredit ido-ubiquitous flx-ido geiser rainbow-delimiters solarized-theme cider company company-mode helm which-key smart-mode-line beacon smartparens magit flycheck ess)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))

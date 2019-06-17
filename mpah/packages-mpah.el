@@ -31,7 +31,8 @@
     geiser 				;scheme - racket
     gnuplot-mode                        ;gnuplot major mode
     gnuplot                             ;drive gnuplot from within emacs
-;;    helm				;mini-buffer autocompletion
+    ;;    helm				;mini-buffer autocompletion
+    htmlize                             ;htmlize buffer - use to create orgmode html output
     ibuffer
     ido-completing-read+ 			;ido completion everywhere
 ;;    ido-ubiquitous  obsolete merged with above
