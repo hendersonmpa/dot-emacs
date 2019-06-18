@@ -10,3 +10,4 @@ session.*
 savefile/
 url/
 mpah/custom-mpah.el
+.org-id-locations
