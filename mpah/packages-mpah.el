@@ -42,6 +42,7 @@
     paredit 				;structured editing
     polymode                            ;Extensible framework for multiple major modes
     poly-R                              ;Various polymodes for R language
+    poly-markdown                       ;Various polymodes for markdown
     py-autopep8                         ;used with elpy
     racket-mode 
     rainbow-delimiters
@@ -52,6 +53,7 @@
     smex 				;enhanced M-x built on ido
     rainbow-mode                        ;colour, colour names
     flycheck				;code checking
+    use-package                         ;package configuration
     which-key
     zenburn-theme)
   "A list of packages to ensure are installed at launch.")

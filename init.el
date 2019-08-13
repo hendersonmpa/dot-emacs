@@ -55,3 +55,4 @@
 (require 'markdown-mpah)
 ;;(require 'helm-mpah)
 
+(put 'downcase-region 'disabled nil)
