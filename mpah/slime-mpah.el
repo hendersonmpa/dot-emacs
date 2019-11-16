@@ -8,10 +8,11 @@
          :coding-system utf-8-unix)))
 
 (setq inferior-lisp-program "/usr/local/bin/sbcl" ; can be switched to roswell above
- lisp-indent-function 'common-lisp-indent-function ;as opposed to elisp indentation
- slime-compile-symbol-function 'slime-fuzzy-complete-symbol ;other options - see documentation
- common-lisp-hyperspec-root "file:///home/mpah/lisp/docs/HyperSpec/"
- slime-startup-animation t)
+      slime-contribs '(slime-fancy)
+      lisp-indent-function 'common-lisp-indent-function ;as opposed to elisp indentation
+      slime-compile-symbol-function 'slime-fuzzy-complete-symbol ;other options - see documentation
+      common-lisp-hyperspec-root "file:///home/mpah/lisp/docs/HyperSpec/"
+      slime-startup-animation t)
 ;;; Path to textinfo files
 (add-to-list 'Info-default-directory-list "~/lisp/docs/info/")
 
