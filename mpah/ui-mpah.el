@@ -17,7 +17,7 @@
       scroll-conservatively 100000
       scroll-preserve-screen-position 1)
 
-(set-frame-font "DejaVu Sans Mono-14" nil t)
+(set-frame-font "DejaVu Sans Mono-12" nil t)
 ;(set-default-font "Monospace-12" nil t)
 ;(set-frame-font "Inconsolata 12" nil t)
 
