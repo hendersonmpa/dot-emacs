@@ -8,7 +8,7 @@
          :coding-system utf-8-unix)))
 
 (setq inferior-lisp-program "/usr/local/bin/sbcl" ; can be switched to roswell above
-      slime-contribs '(slime-fancy)
+      slime-contribs '(slime-fancy slime-autodoc)
       lisp-indent-function 'common-lisp-indent-function ;as opposed to elisp indentation
       slime-compile-symbol-function 'slime-fuzzy-complete-symbol ;other options - see documentation
       common-lisp-hyperspec-root "file:///home/mpah/lisp/docs/HyperSpec/"
@@ -66,6 +66,13 @@
       (read-kbd-macro paredit-backward-delete-key) nil))
 
 (add-hook 'slime-repl-mode-hook 'override-slime-repl-bindings-with-paredit)
+
+;;  swap parentheses and square brackets in slime
+;; (define-key paredit-mode-map (kbd "[") 'paredit-open-round)
+;; (define-key paredit-mode-map (kbd "]") 'paredit-close-round)
+;; (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-round)
+;; (define-key paredit-mode-map (kbd "(") 'paredit-open-square)
+;; (define-key paredit-mode-map (kbd ")") 'paredit-close-square)
 
 ;; Configure slime-tramp
 ;;(require 'slime-tramp)

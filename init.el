@@ -45,6 +45,7 @@
 (require 'org-mpah)
 (require 'slime-mpah)
 (require 'editor-mpah)
+;(require 'keybindings-mpah)
 (require 'global-keybindings-mpah)
 (require 'python-mpah)
 (require 'mail-mpah)

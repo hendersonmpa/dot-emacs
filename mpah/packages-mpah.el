@@ -39,6 +39,7 @@
     magit
     markdown-mode                       ;markdown
     notmuch                             ;search notmuch email index
+    pandoc-mode
     paredit 				;structured editing
     polymode                            ;Extensible framework for multiple major modes
     poly-R                              ;Various polymodes for R language

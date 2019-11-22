@@ -3,6 +3,7 @@
 
 ;; from http://www.clarkdonley.com/blog/2014-10-26-org-mode-and-writing-papers-some-tips.html
 ;; 1. hook flyspell into org-mode
+(require 'org)
 (add-hook 'org-mode-hook 'flyspell-mode)
 (add-hook 'org-mode-hook 'flyspell-buffer)
 
@@ -86,20 +87,20 @@
 ;;               (org-mode (("cite" "[[cite:%K][%A;%A;%A]]"))))))
 
 
-;; (org-add-link-type
-;;  "cite" 'ebib
-;;  (lambda (path desc format)
-;;    (cond
-;;      ((eq format 'html)
-;;       (format "(<cite>%s</cite>)" path))
-;;      ((eq format 'latex)
-;;       (if (or (not desc) (equal 0 (search "cite:" desc)))
-;;           (format "\\cite{%s}" path)
-;;           (format "\\cite[%s][%s]{%s}"
-;;                   (cadr (split-string desc ";"))
-;;                   (car (split-string desc ";"))  path))))))
+(org-add-link-type
+ "cite" 'ebib
+ (lambda (path desc format)
+   (cond
+     ((eq format 'html)
+      (format "(<cite>%s</cite>)" path))
+     ((eq format 'latex)
+      (if (or (not desc) (equal 0 (search "cite:" desc)))
+          (format "\\cite{%s}" path)
+          (format "\\cite[%s][%s]{%s}"
+                  (cadr (split-string desc ";"))
+                  (car (split-string desc ";"))  path))))))
 
-;; (org-add-link-type "ebib" 'ebib)
+(org-add-link-type "ebib" 'ebib)
 
 
 (setq org-latex-pdf-process
