@@ -1,14 +1,13 @@
 ;;; utilites-mpah.el --- utilty functions
 ;;; Code:
 
-
 (defun mpah-unfill-region ()
   (interactive)
   (let ((fill-column (point-max)))
     (fill-region (region-beginning) (region-end) nil)))
 
 
-(defcustom network "/run/user/1001/gvfs"  "location of mounted network drives")
+(defcustom network "/run/user/1000/gvfs"  "location of mounted network drives")
 (defun visit-network ()
   (interactive)
   (find-file network))

@@ -7,6 +7,8 @@
 (define-key ess-r-mode-map "_" #'ess-insert-assign)
 (define-key inferior-ess-r-mode-map "_" #'ess-insert-assign) 
 
+;;(add-hook 'R-mode-hook 'paredit-everywhere-mode)
+;;(add-hook 'ess-mode-hook 'paredit-everywhere-mode)
 
 (provide 'ess-mpah)
 ;;; ess-mpah.el ends here

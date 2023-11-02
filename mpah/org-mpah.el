@@ -1,6 +1,8 @@
 ;;; org-mpah.el --- Org optimizations and tweaks.
 ;;; Code:
 
+;; start up view folded
+(setq org-startup-folded t)
 ;; from http://www.clarkdonley.com/blog/2014-10-26-org-mode-and-writing-papers-some-tips.html
 ;; 1. hook flyspell into org-mode
 (require 'org)
@@ -28,8 +30,8 @@
              ("y" agenda*)
              ("w" todo "WAITING")
 	     ("W" todo-tree "WAITING")
-	     ("d" todo "WAITING")
-	     ("D" todo "WAITING")
+	     ("d" todo "DONE")
+	     ("D" todo-tree "DONE")
              ("u" tags "+urgent")
              ("v" tags-todo "+urgent")
              ("U" tags-tree "+urgent")
@@ -52,6 +54,7 @@
         ("n" "Note" entry (file+headline "~/Dropbox/Org/tasks.org" "Notes")
          "** %?\n %t")))
 
+;;; Export settings
 ;; Export to .doc
 (setq org-odt-preferred-output-format "doc")
 
@@ -63,11 +66,29 @@
 
 ;; (add-to-list 'org-export-filter-bold-functions 'my-beamer-bold)
 
-;;; Org Export
+;;; org Export
 ;; koma-article
 (with-eval-after-load "ox-latex"
   (add-to-list 'org-latex-classes
-               '("koma-article" "\\documentclass{scrartcl}"
+               '("koma-article" "\\documentclass[12pt]{scrartcl}"
+                 ("\\section{%s}" . "\\section*{%s}")
+                 ("\\subsection{%s}" . "\\subsection*{%s}")
+                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                 ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                 ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
+
+(with-eval-after-load "ox-latex"
+  (add-to-list 'org-latex-classes
+             '("els-article" "\\documentclass[review]{elsarticle}"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
+
+(with-eval-after-load "ox-latex"
+  (add-to-list 'org-latex-classes
+               '("koma-article-11" "\\documentclass[11.5pt]{scrartcl}"
                  ("\\section{%s}" . "\\section*{%s}")
                  ("\\subsection{%s}" . "\\subsection*{%s}")
                  ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
@@ -75,11 +96,16 @@
                  ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
 
 
+;; Org citations
+(require 'oc-basic)
+(require 'oc-csl)
+(setq org-cite-csl-styles-dir "~/Documents/manuscripts/csl")
 
-;; Org citations with ebib
-(setq ebib-citation-commands
-      (quote ((any (("cite" "\\cite{%K}")))
-              (org-mode (("cite" " cite:%K"))))))
+
+;;with ebib
+;; (setq ebib-citation-commands
+;;       (quote ((any (("cite" "\\cite{%K}")))
+;;               (org-mode (("cite" " cite:%K"))))))
 
 ;;; A more complicated version
 ;; (setq ebib-citation-commands
@@ -87,28 +113,20 @@
 ;;               (org-mode (("cite" "[[cite:%K][%A;%A;%A]]"))))))
 
 
-(org-add-link-type
- "cite" 'ebib
- (lambda (path desc format)
-   (cond
-     ((eq format 'html)
-      (format "(<cite>%s</cite>)" path))
-     ((eq format 'latex)
-      (if (or (not desc) (equal 0 (search "cite:" desc)))
-          (format "\\cite{%s}" path)
-          (format "\\cite[%s][%s]{%s}"
-                  (cadr (split-string desc ";"))
-                  (car (split-string desc ";"))  path))))))
+;; (org-add-link-type
+;;  "cite" 'ebib
+;;  (lambda (path desc format)
+;;    (cond
+;;      ((eq format 'html)
+;;       (format "(<cite>%s</cite>)" path))
+;;      ((eq format 'latex)
+;;       (if (or (not desc) (equal 0 (search "cite:" desc)))
+;;           (format "\\cite{%s}" path)
+;;           (format "\\cite[%s][%s]{%s}"
+;;                   (cadr (split-string desc ";"))
+;;                   (car (split-string desc ";"))  path))))))
 
-(org-add-link-type "ebib" 'ebib)
-
-
-(setq org-latex-pdf-process
-      '("xelatex -8bit -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "biber %b"
-        "xelatex -8bit -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "xelatex -8bit -shell-escape -interaction nonstopmode -output-directory %o %f"))
-
+;; (org-add-link-type "ebib" 'ebib)
 
 ;;; Org Babel
 (org-babel-do-load-languages
@@ -145,6 +163,7 @@
 (setq org-latex-pdf-process
       '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "biber %b"
+	"biber %b"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 

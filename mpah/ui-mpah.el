@@ -10,8 +10,8 @@
 (setq ring-bell-function 'ignore)
 
 ;; disable startup screen
-(setq inhibit-startup-screen t)
-(setq initial-buffer-choice "~/Dropbox/Org/tasks.org")
+;;(setq inhibit-startup-screen t)
+;;(setq initial-buffer-choice "~/Dropbox/Org/tasks.org")
 ;; nice scrolling
 (setq scroll-margin 0
       scroll-conservatively 100000
@@ -65,8 +65,8 @@ dark theme")
 (add-hook 'after-init-hook #'sml/setup)
 
 ;; show the cursor when moving after big movements in the window
-;; (require 'beacon)
-;; (beacon-mode +1)
+(require 'beacon)
+(beacon-mode +1)
 
 ;; show available keybindings after you start typing
 (require 'which-key)

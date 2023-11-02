@@ -42,18 +42,20 @@
 ;; replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;; toggle menu-bar visibility
+(global-set-key (kbd "<f10>") 'menu-bar-mode)
+
+;; <f11> is full screen mode on Ubuntu already
 ;; (unless (fboundp 'toggle-frame-fullscreen)
 ;;   (global-set-key (kbd "<f11>") 'prelude-fullscreen))
 
-;; toggle menu-bar visibility
+;; toggle theme 
 (if window-system
     (progn
       (global-set-key (kbd "<f12>") 'toggle-dark-light-theme)
-      (load-theme 'solarized-dark)
+;;      (load-theme 'solarized-dark)
       ;;(set-face-font 'default "Liberation Mono-12")
       ))
-
-;;(global-set-key (kbd "<f12>") 'menu-bar-mode)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)

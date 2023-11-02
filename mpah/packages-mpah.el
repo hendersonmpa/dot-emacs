@@ -7,7 +7,8 @@
 			 ;;("marmalade" . "http://marmalade-repo.org/packages/")
 			 ("melpa-stable" . "http://stable.melpa.org/packages/")
 			 ("melpa" . "http://melpa.org/packages/")
-			 ("org" . "http://orgmode.org/elpa/")))
+			 ;;("org" . "http://orgmode.org/elpa/") no longer in use
+			 ))
 
 ;; Use the stable version of cider
 (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
@@ -31,6 +32,7 @@
     geiser 				;scheme - racket
     gnuplot-mode                        ;gnuplot major mode
     gnuplot                             ;drive gnuplot from within emacs
+    graphviz-dot-mode                   ;graphviz 
     ;;    helm				;mini-buffer autocompletion
     htmlize                             ;htmlize buffer - use to create orgmode html output
     ibuffer
@@ -41,6 +43,7 @@
     notmuch                             ;search notmuch email index
     pandoc-mode
     paredit 				;structured editing
+    org                                 ;org mode
     polymode                            ;Extensible framework for multiple major modes
     poly-R                              ;Various polymodes for R language
     poly-markdown                       ;Various polymodes for markdown

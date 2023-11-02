@@ -2,7 +2,9 @@
 ;;; Code:
 
 ;; Start emacs server
-(server-start)
+;; I am now using $ emacs --daemon  to start a server after reboot
+;;(server-start)
+
 
 ;; Add texlive to the path
 ;;(setenv "PATH" (concat (getenv "PATH") "c:\texlive\2016\bin\win32"))
@@ -10,9 +12,6 @@
 (setq ispell-program-name "aspell")
 (setq ispell-personal-dictionary "~/.ispell")
 (require 'ispell)
-
-;; use eww as the default browser
-(setq browse-url-browser-function 'eww-browse-url)
 
 ;; reload updated files
 (global-auto-revert-mode t)

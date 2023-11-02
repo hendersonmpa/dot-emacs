@@ -54,6 +54,7 @@
 (require 'latex-mpah)
 (require 'notmuch-mpah)
 (require 'markdown-mpah)
+(require 'julia-mpah)
 ;;(require 'helm-mpah)
 
 (put 'downcase-region 'disabled nil)
